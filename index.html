@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Schedule Closings - Professional real estate closing platform for lenders, attorneys, realtors, and customers" />
+    <meta name="keywords" content="real estate, closing, schedule, lenders, attorneys, realtors" />
+    <title>Schedule Closings - Professional Real Estate Closing Platform</title>
+    <script>
+      // Debug script to catch HubSpot loading
+      (function() {
+        let hubspotDefineCount = 0;
+        const originalDefine = window.hubspot?.define;
+        
+        Object.defineProperty(window, 'hubspot', {
+          get: function() { return this._hubspot; },
+          set: function(value) {
+            if (value && value.define) {
+              hubspotDefineCount++;
+              console.warn(`HubSpot define loaded ${hubspotDefineCount} times`, new Error().stack);
+            }
+            this._hubspot = value;
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
